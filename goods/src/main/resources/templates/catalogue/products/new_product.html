@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Product</title>
+</head>
+
+<body>
+<a data-th-href="@{/catalogue/products/list.html}">&larr; To goods list</a>
+
+<h1 class="title">New Goods</h1>
+
+<form data-th-action="@{/catalogue/products/create}" method="post">
+    <label>Name:
+        <input type="text" name="title">
+    </label><br>
+    <label>Details:
+        <input type="text" name="details">
+    </label>
+    <button type="submit">Create</button>
+</form>
+
+
+</body>
+</html>

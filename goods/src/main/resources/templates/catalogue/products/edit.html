@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit &laquo;[[${product.title}]]&raquo; &ndash; </title>
+</head>
+
+<body>
+<a data-th-href="@{/catalogue/products/{productId}(productId=${product.id})}">&larr; To goods </a>
+
+<h1 class="title">Edit &laquo;[[${product.title}]]</h1>
+
+<form data-th-action="@{/catalogue/products/{productId}/edit(productId=${product.id})}" method="post">
+    <label>Name:
+        <input type="text" name="title" data-th-value="${product.title}">
+    </label><br>
+    <label>Details:
+        <input type="text" name="details" data-th-value="${product.details}">
+    </label>
+    <button type="submit">Edit</button>
+</form>
+
+
+</body>
+</html>
