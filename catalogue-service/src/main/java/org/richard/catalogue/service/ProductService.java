@@ -1,7 +1,6 @@
-package org.richard.service;
+package org.richard.catalogue.service;
 
-import org.richard.entity.Product;
-import org.richard.repository.ProductRepository;
+import org.richard.catalogue.entity.Product;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,11 +1,10 @@
-package org.richard.repository;
+package org.richard.catalogue.repository;
 
 
-import org.richard.entity.Product;
+import org.richard.catalogue.entity.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
 @Repository
 public class InMemoryRepository implements ProductRepository {

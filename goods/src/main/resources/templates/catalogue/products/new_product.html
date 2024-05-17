@@ -9,13 +9,19 @@
 <a data-th-href="@{/catalogue/products/list.html}">&larr; To goods list</a>
 
 <h1 class="title">New Goods</h1>
+<div data-th-if="${errors}">
+    <h2>input errors:</h2>
+    <ul>
+        <li data-th-each="error: ${errors}" data-th-text="${error}"></li>
+    </ul>
+</div>
 
 <form data-th-action="@{/catalogue/products/create}" method="post">
     <label>Name:
-        <input type="text" name="title">
+        <input type="text" name="title" data-th-value="${payload?.title}">
     </label><br>
     <label>Details:
-        <input type="text" name="details">
+        <textarea name="details" data-th-text="${payload?.details}"></textarea>
     </label>
     <button type="submit">Create</button>
 </form>

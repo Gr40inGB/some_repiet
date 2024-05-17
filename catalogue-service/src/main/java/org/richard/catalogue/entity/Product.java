@@ -1,4 +1,4 @@
-package org.richard.entity;
+package org.richard.catalogue.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

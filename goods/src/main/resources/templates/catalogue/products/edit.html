@@ -9,13 +9,19 @@
 <a data-th-href="@{/catalogue/products/{productId}(productId=${product.id})}">&larr; To goods </a>
 
 <h1 class="title">Edit &laquo;[[${product.title}]]</h1>
+<div data-th-if="${errors}">
+    <h2>input errors:</h2>
+    <ul>
+        <li data-th-each="error: ${errors}" data-th-text="${error}"></li>
+    </ul>
+</div>
 
 <form data-th-action="@{/catalogue/products/{productId}/edit(productId=${product.id})}" method="post">
     <label>Name:
-        <input type="text" name="title" data-th-value="${product.title}">
+        <input type="text" name="title" data-th-value="${payload != null ? payload.title : product.title}">
     </label><br>
     <label>Details:
-        <input type="text" name="details" data-th-value="${product.details}">
+        <input type="text" name="details" data-th-value="${payload != null ? payload.details : product.details}">
     </label>
     <button type="submit">Edit</button>
 </form>

@@ -1,11 +1,10 @@
-package org.richard.service;
+package org.richard.catalogue.service;
 
 import lombok.RequiredArgsConstructor;
-import org.richard.entity.Product;
-import org.richard.repository.ProductRepository;
+import org.richard.catalogue.entity.Product;
+import org.richard.catalogue.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
-import java.rmi.NoSuchObjectException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;

@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>goods</module>
+        <module>catalogue-service</module>
     </modules>
 
     <properties>
